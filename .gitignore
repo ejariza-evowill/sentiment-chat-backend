@@ -1,0 +1,26 @@
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Dependency directories
+/dist/
+/build/
+*.egg-info/
+
+# Logs
+*.log
+
+# Ignore development and local configuration files
+.env
+local_settings.py
+
+# Ignore user-specific settings
+.settings/
