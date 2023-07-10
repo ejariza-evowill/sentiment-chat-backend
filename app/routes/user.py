@@ -1,11 +1,13 @@
-from app.utils.databaseManager import get_db
-from app.models import User, UserCreate, Message, UserModel
-from app.config import EMAIL_REGEX
-from fastapi.responses import JSONResponse
-from fastapi import APIRouter
-from fastapi import Depends
-from typing import List
 import re
+from typing import List
+
+from fastapi import APIRouter, Depends
+from fastapi.responses import JSONResponse
+
+from app.config import EMAIL_REGEX
+from app.models import User, UserCreate, Message, UserModel
+from app.utils.databaseManager import get_db
+
 
 router = APIRouter(tags=["User"], prefix="/api")
 

@@ -1,7 +1,7 @@
-from app.models import Base, User
+import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import pytest
+from app.models import Base, User
 
 DATABASE_URL = "sqlite:///:memory:"
 engine = create_engine(DATABASE_URL)

@@ -1,7 +1,8 @@
-from app.utils.databaseManager import init_database
-from app.routes import user, chat
 from fastapi import FastAPI
+
 from app.config import DATABASE_URL
+from app.routes import user, chat
+from app.utils.databaseManager import init_database
 
 
 app = FastAPI()
