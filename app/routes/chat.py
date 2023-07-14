@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter()
+router = APIRouter(tags=["Chat"], prefix="/api")
 
 @router.get("/chat")
 def get_chat():
