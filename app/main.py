@@ -5,15 +5,12 @@ from sqlalchemy.orm import sessionmaker
 from app.config import DATABASE_URL
 from app.models import Base
 from app.routes import chat, email, user
+from app.utils.databaseManager import init_database
 
 app = FastAPI()
 
-# Configure the database connection
-engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-# Create the database tables
-Base.metadata.create_all(bind=engine)
+#Configuring and initializing the database
+init_database(DATABASE_URL)
 
 # Include the routers
 app.include_router(user.router)
