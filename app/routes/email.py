@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.utils import send_email
+from app.utils.email import send_email
 
 router = APIRouter()
 
